@@ -4,7 +4,7 @@ This app aims at demonstrating the issue when using Bouncy Castle FIPS Provider 
 
 A property file fips.properties in WEB-INF/lib has options for running the app in FIPS vs Non-FIPS mode.
 
-**Option to run the app using Bouncy Castle FIPS Provider. If set to true, adds the provider to the top of security provider list.** 
+**Option to run the app using Bouncy Castle FIPS Provider. If set to true, adds the provider to the top of security provider list.**
 fipsEnabled=true
 
 **Option to change the thread's FIPS Mode to approved.**  
