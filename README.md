@@ -4,18 +4,17 @@ This app aims at demonstrating the issue when using Bouncy Castle FIPS Provider 
 
 A property file fips.properties in WEB-INF/lib has options for running the app in FIPS vs Non-FIPS mode.
 
-Option to run the app using Bouncy Castle FIPS Provider. If set to true, adds the provider to the top of security provider list. 
+**Option to run the app using Bouncy Castle FIPS Provider. If set to true, adds the provider to the top of security provider list.** 
 fipsEnabled=true
 
-Option to change the thread's FIPS Mode to approved.  
+**Option to change the thread's FIPS Mode to approved.**  
 setFipsModeApproved=true 
 
 **Note: This app aims to demonstrate the issue when changing the thread's FIPS mode to approved.**
 
 App can be access @ https://<hostname>:8043 and clicking on the link on the page or directly accessing https://<hostname>:8043/SimpleServlet. 
 
-**The page comes up fine when access first time. The issue occurs upon accessing the page later. Try refreshing the page or accessing it later to see the issue. The error in the log file would be as below: **
-
+__The page comes up fine when access first time. The issue occurs upon accessing the page later. Try refreshing the page or accessing it later to see the issue. The error in the log file would be as below:__
 
 `org.bouncycastle.crypto.fips.FipsUnapprovedOperationError: Attempt to use approved implementation in unapproved thread: SHA-256
 	at org.bouncycastle.crypto.internal.io.Utils.approvedModeCheck(Utils.java:16)
