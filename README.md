@@ -1,4 +1,4 @@
-# Demo App using Bouncy Castle FIPS Provider
+# Demo App using Bouncy Castle 1.0.0 FIPS Provider
 
 This app aims at demonstrating the issue when using Bouncy Castle FIPS Provider started in FIPS unapproved mode and then changing the thread's FIPS mode to approved using `org.bouncycastle.crypto.CryptoServicesRegistrar.setApprovedOnlyMode( true )` API.
 
