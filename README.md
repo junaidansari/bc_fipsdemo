@@ -43,3 +43,7 @@ org.bouncycastle.crypto.fips.FipsUnapprovedOperationError: Attempt to use approv
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:745)`
+
+# Add the following http connector info to tomcat's server.xml to serve https request on port 8043
+
+`<Connector port="8043" redirectPort="80" secure="true" SSLEnabled="true" sslProtocol="TLS" sslEnabledProtocols="TLSv1.2,TLSv1.1,TLSv1" connectionTimeout="86400000" maxThreads="200" minSpareThreads="1" maxHttpHeaderSize="65536" keystoreFile="<replace_your_jks_file_path" keystorePass="<replace_your_keyStorePass" enableLookups="false" disableUploadTimeout="true" acceptCount="100" scheme="https" clientAuth="false" URIEncoding="UTF-8" useBodyEncodingForURI="true"/>`
